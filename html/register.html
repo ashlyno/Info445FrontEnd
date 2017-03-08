@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Real Estate DB</title>
+        
+        <!-- Style -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+        <link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/static/main.css" />
+
+
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-sanitize.js"></script>
+        <script src="/static/app.js"></script>
+
+        <!-- Favicon -->
+        <link rel="icon" href="/static/img/tooth.png"/>  
+    </head>
+
+    <body>
+    <div ng-app="myApp" ng-controller="MyCtrl"> <!-- specify app -->   
+        <header>
+            <div id="fixed">
+                <a href="/"><p id="title">Real Estate DB</p></a>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li> 
+                        <li><a href="register.html">Tenants</a></li>
+                        <li><a href="appointment.html">Properties</a></li>
+                    </ul>
+                </nav>
+            </div>      
+        </header>
+
+        <main>
+            <div class="content">
+                <div id ="regist" class ="col-md-4">
+                    <p>Add New Tenant</p>
+                    <form name="regiForm" nonvalidate>
+                      <label>First name:</label><br>
+                      <input ng-model="firstName" type="text" name="firstName"><br>
+                      <label>Last name:</label><br>
+                      <input ng-model="lastName" type="text" name="lastName"><br>
+                      <label>Email:</label><br>
+                      <input ng-model="email" type="email" name="email"><br>
+                      <label>Date of Birth:</label><br>
+                      <input ng-model="birth" type="date" name="birthdate"><br>
+                      <br>
+                      <button id="submit" ng-click="registerIt()"> Submit </button>
+                    </form>
+                </div>
+                <div class="col-md-8 listBox">
+                    <div class="row">
+              			  <div ng-model="registerList" id="registerList"></div>
+            		</div>    
+                </div>
+            </div>
+        </main>
+    </div> 
+    <footer>
+        <div class="col-md-9"><p>Created by: Ashlyn, Arvind, Christie, Tin</p></div>
+        <div class="col-md-3"><p>Copyright 2016. A HuskyData Production &copy;</p></div>
+    </footer>    
+
+    </body>
+</html>
